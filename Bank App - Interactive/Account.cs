@@ -53,13 +53,13 @@ public class Account
 
     #region Methods
 
-    public decimal Deposit(decimal amount)
+    public virtual decimal Deposit(decimal amount)
     {
         // TODO: Implement the Deposit method
         return 0;
     }
 
-    public decimal Withdraw(decimal amount)
+    public virtual decimal Withdraw(decimal amount)
     {
         // TODO: Implement the Withdraw method
         return 0;
