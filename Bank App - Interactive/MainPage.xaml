@@ -3,8 +3,63 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BankApp.MainPage">
 			 
-    <Label Text="Startup project for the Interactive MAUI Bank App exercise."
-           HorizontalOptions="Center"
-           VerticalOptions="Center"/>
+    <Grid>
+	    <Grid.RowDefinitions>
+		    <RowDefinition Height="Auto"/>
+		    <RowDefinition Height="Auto"/>
+		    <RowDefinition Height="Auto"/>
+	    </Grid.RowDefinitions>
+	    
+	    <Grid.ColumnDefinitions>
+		    <ColumnDefinition Width="Auto"/>
+		    <ColumnDefinition Width="Auto"/>
+		    <ColumnDefinition Width="Auto"/>
+	    </Grid.ColumnDefinitions>
+	    
+	    <!-- === Main Menu Bank UI  === -->
+	    
+	    <!-- Add a Title for the Bank-->
+	    <Label x:Name="_lblBankTitle"
+			Text="Uncreative Bank Title"
+		    TextColor="Black"
+		    FontSize="40"
+		    Grid.Row="0"
+		    Grid.Column="0"
+		    Margin="480,250,0,0"
+		    IsVisible="True"
+		/>
+	    
+	    <!-- Add a Button to Select an Account-->
+	    <Button x:Name="_btnSelectAccount"
+		    Text="Select Account"
+		    TextColor="Aqua"
+		    FontSize="30"
+		    BackgroundColor="Black"
+		    Grid.Row="1"
+		    Grid.Column="0"
+		    WidthRequest="300"
+		    Margin="460,50,0,0"
+		/>
+	    
+	    <!-- Add a Button to Create an Account-->
+	    <Button x:Name="_btnCreateAccount"
+            Text="Create Account"
+            TextColor="Lime"
+            FontSize="30"
+            BackgroundColor="Black"
+            Grid.Row="2"
+            Grid.Column="0"
+            WidthRequest="300"
+            Margin="460,50,0,0"
+	    />
+	    
+	    <!-- === Select Account UI  === -->
+	    
+	    
+	    <!-- === Create Account UI  === -->
+	    
+	    
+	    
+    </Grid>
  
 </ContentPage>
