@@ -4,6 +4,12 @@ namespace BankApp;
 /// </summary>
 public class ChequingAccount : Account
 {
+    #region Constant Variables
+    private const int OVERDRAFT_LIMIT = 500;
+    private const double MAX_INTEREST_RATE = 1.0;
+    #endregion
+    
+    
     #region Constructor
     public ChequingAccount(string acctHolderName, int acctNo) : base(acctHolderName, acctNo)
     {
@@ -13,14 +19,11 @@ public class ChequingAccount : Account
 
 
     #region Properties
-
-    
-
     
     public double AnnualInterestRate
     {
-        get { return base.AnnualInterestRate; }
-        set { base.AnnualInterestRate = value; }
+        get { return _annualInterestRate; }
+        set { _annualInterestRate = value; }
     }
     #endregion
     

@@ -4,11 +4,11 @@ namespace BankApp;
 /// </summary>
 public class Account
 {
-    #region Field Variables
-    private string _acctHolderName;
-    private int _acctNo;
-    private decimal _balance;
-    private double _annualInterestRate;
+    #region Field Variables 
+    protected string _acctHolderName;
+    protected int _acctNo;
+    protected decimal _balance;
+    protected double _annualInterestRate;
     
     #endregion
 
@@ -18,9 +18,9 @@ public class Account
     public Account(string acctHolderName, int acctNo)
     {
         _acctHolderName = acctHolderName;
-        _acctNo = acctNo;
-        _balance = 0m;
-        _annualInterestRate = 0d;
+        _acctNo = acctNo;   
+        _balance = 300m;
+        _annualInterestRate = 3.0d;
     }
     
     #endregion
@@ -39,9 +39,9 @@ public class Account
     }
 
     public double AnnualInterestRate
-    {
+    { 
         get { return _annualInterestRate; }
-        set { _annualInterestRate = value; }
+        set { _annualInterestRate = value / 100; }
     }
 
     public decimal Balance

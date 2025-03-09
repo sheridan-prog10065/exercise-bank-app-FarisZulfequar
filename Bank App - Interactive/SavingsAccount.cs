@@ -4,6 +4,11 @@ namespace BankApp;
 /// </summary>
 public class SavingsAccount : Account
 {
+    #region Constant Variables
+    private const double MATCHING_DEPOSIT_RATIO = 0.5;
+    private const double MIN_INTEREST_RATE = 3.0;
+    #endregion
+    
     #region Constructor
     public SavingsAccount(string acctHolderName, int acctNo) : base(acctHolderName, acctNo)
     {
@@ -15,8 +20,8 @@ public class SavingsAccount : Account
     #region Field Properties
     public double AnnualInterestRate
     {
-        get { return base.AnnualInterestRate; }
-        set { base.AnnualInterestRate = value; }
+        get { return _annualInterestRate; }
+        set { _annualInterestRate = value / 100; }
     }
     #endregion
     
