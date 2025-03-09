@@ -67,6 +67,19 @@
 		    ItemsSource="{Binding}"
 		/>
 	    
+	    <!-- Add a Button to go Back to the Main Menu-->
+	    <Button x:Name="_btnBackToMainMenu"
+	            Text="Back"
+	            TextColor="Magenta"
+	            FontSize="30"
+	            BackgroundColor="Black"
+	            Grid.Row="2"
+	            Grid.Column="0"
+	            WidthRequest="300"
+	            Margin="460,50,0,0"
+	            IsVisible="False"
+	            Clicked="BackToMainMenuOnClick"
+	    />
 	    
 	    
 	    <!-- === Create Account UI  === -->

@@ -19,5 +19,15 @@ public partial class MainPage : ContentPage
 		_btnCreateAccount.IsVisible = false;
 		_btnSelectAccount.IsVisible = false;
 		_pckSelectAccountByNumber.IsVisible = true;
+		_btnBackToMainMenu.IsVisible = true;
+	}
+
+	private void BackToMainMenuOnClick(object sender, EventArgs e)
+	{
+		_lblBankTitle.Text = "Uncreative Bank Title";
+		_btnCreateAccount.IsVisible = true;
+		_btnSelectAccount.IsVisible = true;
+		_pckSelectAccountByNumber.IsVisible = false;
+		_btnBackToMainMenu.IsVisible = false;
 	}
 }
