@@ -8,7 +8,16 @@ public partial class MainPage : ContentPage
 		_bank = new Bank();
 		
 		InitializeComponent();
+
+		_pckSelectAccountByNumber.ItemsSource = _bank.CreateListOfAccountID();
 	}
-	
-	// This Is A Test Commit :>
+
+
+	private void OnSelectingAccountClicked(object sender, EventArgs e)
+	{
+		_lblBankTitle.Text = "Select Your Account";
+		_btnCreateAccount.IsVisible = false;
+		_btnSelectAccount.IsVisible = false;
+		_pckSelectAccountByNumber.IsVisible = true;
+	}
 }

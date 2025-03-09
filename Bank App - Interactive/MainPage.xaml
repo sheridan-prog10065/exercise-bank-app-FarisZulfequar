@@ -39,6 +39,7 @@
 		    Grid.Column="0"
 		    WidthRequest="300"
 		    Margin="460,50,0,0"
+		    Clicked="OnSelectingAccountClicked"
 		/>
 	    
 	    <!-- Add a Button to Create an Account-->
@@ -54,6 +55,18 @@
 	    />
 	    
 	    <!-- === Select Account UI  === -->
+	    
+	    <!-- Add a Picker that allows the user to choose an account by ID-->
+	    <Picker x:Name="_pckSelectAccountByNumber"
+		    Title="{OnPlatform MacCatalyst=''}"
+		    Grid.Row="1"
+		    Grid.Column="0"
+		    WidthRequest="300"
+		    Margin="460,50,0,0"
+		    IsVisible="False"
+		    ItemsSource="{Binding}"
+		/>
+	    
 	    
 	    
 	    <!-- === Create Account UI  === -->

@@ -1,3 +1,5 @@
+using System.Collections.ObjectModel;
+
 namespace BankApp;
 /// <summary>
 /// A class that represents the Bank that holds a list of info about Accounts"
@@ -87,6 +89,20 @@ public class Bank
     private int DistributingRandomBalance()
     {
         return 0;
+    }
+
+    public ObservableCollection<int> CreateListOfAccountID()
+    {
+        ObservableCollection<int> accountIDList = new ObservableCollection<int>();
+        int accountID;
+        
+        foreach (Account account in AccountList)
+        {
+            accountID = account.AccountNumber;
+            accountIDList.Add(accountID);
+        }
+    
+        return accountIDList;
     }
     #endregion
 }
